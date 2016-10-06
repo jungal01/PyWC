@@ -2,18 +2,18 @@
 
 import sys
 
-print(sys.argv)
+if ('l' or 'w' or 'c') not in arg:
+	l_option = True
+	w_option = True
+	c_ option = True
 
-#accumulator pattern
-accumulator = 0
+elif argv[1][0] == '-':
+	if 'l' in arg:
+		l_option = True
 
-for i in range(10):
-	accumulator += 2*i
+	elif 'w' in arg:
+		w_option = True
 
-print(accumulator)
+	elif 'c' in arg:
+		c_option = True
 
-# iterate over file
-myfile = open('pywc')
-
-for line in myfile:
-    print(line)
