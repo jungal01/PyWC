@@ -1,0 +1,19 @@
+#!/usr/bin/python3
+
+import sys
+
+print(sys.argv)
+
+#accumulator pattern
+accumulator = 0
+
+for i in range(10):
+	accumulator += 2*i
+
+print(accumulator)
+
+# iterate over file
+myfile = open('pywc')
+
+for line in myfile:
+    print(line)
