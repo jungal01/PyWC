@@ -2,18 +2,27 @@
 
 import sys
 
-if ('l' or 'w' or 'c') not in arg:
-	l_option = True
-	w_option = True
-	c_ option = True
+l_option = True
+w_option = True
+c_option = True
 
-elif argv[1][0] == '-':
-	if 'l' in arg:
-		l_option = True
+if len(sys.argv) > 1 and sys.argv[1][0] == '-':
+	l_option = False
+	w_option = False
+	c_option = False
+else:
+	raise AttributeError('The command is incomplete')
 
-	elif 'w' in arg:
-		w_option = True
+for arg in sys.argv:
+	if arg[0] == '-':
+		if 'l' in arg:
+			l_option = True
+		elif 'w' in arg:
+			w_option = True
+		elif 'c' in arg:
+			c_option = True
+		else:
+			raise AttributeError('That command is not available')
 
-	elif 'c' in arg:
-		c_option = True
+
 
