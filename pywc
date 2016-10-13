@@ -10,19 +10,20 @@ if len(sys.argv) > 1 and sys.argv[1][0] == '-':
 	l_option = False
 	w_option = False
 	c_option = False
-else:
-	raise AttributeError('The command is incomplete')
 
 for arg in sys.argv:
 	if arg[0] == '-':
 		if 'l' in arg:
 			l_option = True
-		elif 'w' in arg:
+		if 'w' in arg:
 			w_option = True
-		elif 'c' in arg:
+		if 'c' in arg:
 			c_option = True
-		else:
-			raise AttributeError('That command is not available')
+		
+	files = [i for i in range(1,len(sys.argv)) if sys.argv[1][0] != '-']
 
+if l_option == True:
+	eggs = 'spam'
+print(l_option, w_option, c_option, files)
 
 
