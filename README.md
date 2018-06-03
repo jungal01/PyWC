@@ -1,4 +1,4 @@
-# testrepo
+# PyWC
 
 This program is designed to mimic the wc command in a bash terminal on linux. To run this program, ensure that python 3 is 
 installed on your machine. There are four types of commands that this program accepts. <code>-l</code>, counts the
